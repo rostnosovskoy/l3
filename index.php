@@ -8,16 +8,24 @@
     <title>New document</title>
 </head>
 <body>
-// JSON example
+<!-- JSON example-->
 <h2>Create Object from JSON String</h2>
-<p id="demo"></p>
+<p id="demo">111</p>
+<p id="demo1">111</p>
+<p id="demo2">111</p>
 <script>
+    var con_el;
     var text = '{"employees":[' +
-    '{"firstName":"John", "lastName":"Doe" },'+;
-    '{"firstName":"Anna", "lastName":"Smith" },'+;
-    '{"firstName":"Peter", "lastName":"Jones" }]}';
+    '{"firstName":"John ", "lastName":"Doe" },'+
+    '{"firstName":"Anna ", "lastName":"Smith" },'+
+    '{"firstName":"Peter ", "lastName":"Jones" }]}';
     obj = JSON.parse(text);
-    document.getElementById("demo").innerHTML = obj.employees[1].firstName + obj.employees[1].lastName;
+    con_el = document.getElementById("demo");
+    con_el1 = document.getElementById("demo1");
+    con_el2 = document.getElementById("demo2");
+    con_el.innerHTML = obj.employees[0].firstName + obj.employees[0].lastName;
+    con_el1.innerHTML = obj.employees[1].firstName + obj.employees[1].lastName;
+    con_el2.innerHTML = obj.employees[2].firstName + obj.employees[2].lastName;
 </script>
 
 
